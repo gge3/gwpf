@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$db = "portfolio";
+$db = "gwpf_db";
 $user = "portfolio_user";
 $pass = "password_forta_123";
 
