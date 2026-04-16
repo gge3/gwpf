@@ -1,7 +1,7 @@
 <?php
 require 'auth.php';
 
-$conn = new mysqli("localhost", "portfolio_user", "password_forta_123", "portfolio");
+$conn = new mysqli("localhost", "portfolio_user", "password_forta_123", "gwpf_db");
 
 $result = $conn->query("SELECT * FROM messages ORDER BY created_at DESC");
 ?>
