@@ -11,7 +11,7 @@ $form_msg    = htmlspecialchars($_GET['msg'] ?? '');
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OPERATIVE_01 // PORTFOLIO</title>
+  <title>GREN.WORKS</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -23,7 +23,7 @@ $form_msg    = htmlspecialchars($_GET['msg'] ?? '');
 
     <!-- ── HEADER ── -->
     <header>
-      <a href="index.php" class="logo">OPERATIVE<span>_01</span></a>
+      <a href="index.php" class="logo">GREN<span>.WORKS</span></a>
       <nav>
         <a href="#about">DOSSIER</a>
         <a href="#projects">ARXIUS</a>
@@ -36,11 +36,11 @@ $form_msg    = htmlspecialchars($_GET['msg'] ?? '');
     <!-- ── HERO ── -->
     <section class="hero">
       <div class="hero-inner">
-        <span class="hero-tag">// INTERFACE SEGURA ACTIVA</span>
-        <h2>Sistemes. <em>Precisió.</em> Control.</h2>
+        <span class="hero-tag">// Powered by GREN.WORKS</span>
+        <h2>Disseny. <em>Codi.</em> Execució.</h2>
         <p>
-          Enginyer de backend especialitzat en arquitectures distribuïdes,<br>
-          automatització i visualització de dades en temps real.
+          Un portfoli de projectes, processos i resultats.<br>
+          Aquest espai recull projectes d’art, música i el codi i gestió.
         </p>
         <div class="boot-line" id="boot"></div>
       </div>

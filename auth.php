@@ -7,7 +7,7 @@ define('ADMIN_PASS',     'changeme123');   // ← canvia-ho!
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'portfolio');
 define('DB_USER', 'portfolio_user');
-define('DB_PASS', 'PasswordSegur123!');
+define('DB_PASS', 'password_forta_123');
 
 // ── SESSION ────────────────────────────────────────────────────
 if (session_status() === PHP_SESSION_NONE) {
