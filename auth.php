@@ -1,13 +1,13 @@
 <?php
 // ── CONFIGURATION ──────────────────────────────────────────────
-define('DB_USER', 'portfolio_user');
-define('DB_PASS', 'PasswordSegur123!');
+define('ADMIN_USER',     'operative');
+define('ADMIN_PASS',     'changeme123');   // ← canvia-ho!
 
 // ── DB CONFIG ──────────────────────────────────────────────────
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'portfolio');
-define('DB_USER', 'root');        // ← el teu usuari MySQL
-define('DB_PASS', '');            // ← la teva contrasenya MySQL
+define('DB_USER', 'portfolio_user');
+define('DB_PASS', 'PasswordSegur123!');
 
 // ── SESSION ────────────────────────────────────────────────────
 if (session_status() === PHP_SESSION_NONE) {
