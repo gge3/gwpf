@@ -1,7 +1,7 @@
 <?php
 // ── CONFIGURATION ──────────────────────────────────────────────
-define('ADMIN_USER',     'operative');
-define('ADMIN_PASS',     'changeme123');   // ← canvia-ho!
+define('DB_USER', 'portfolio_user');
+define('DB_PASS', 'PasswordSegur123!');
 
 // ── DB CONFIG ──────────────────────────────────────────────────
 define('DB_HOST', 'localhost');
