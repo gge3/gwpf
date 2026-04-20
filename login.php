@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LOGIN // OPERATIVE_01</title>
+  <title>LOGIN // GREN.WORKS</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <div class="login-wrap z1">
     <div class="login-box">
-      <span class="logo-lg">OPERATIVE_01</span>
+      <span class="logo-lg">GREN.WORKS</span>
       <span class="sub">// SECURE ACCESS PORTAL</span>
       <h2>AUTENTICACIÓ REQUERIDA</h2>
 
