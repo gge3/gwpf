@@ -23,7 +23,7 @@ $form_msg    = htmlspecialchars($_GET['msg'] ?? '');
 
     <!-- ── HEADER ── -->
     <header>
-      <a href="index.php" class="logo">GREN<span>.WORKS</span></a>
+      <a href="index.php" class="logo">GREN<span>.WORKSs</span></a>
       <nav>
         <a href="#about">DOSSIER</a>
         <a href="#projects">ARXIUS</a>
