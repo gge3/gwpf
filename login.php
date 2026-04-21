@@ -1,25 +1,18 @@
 <?php
 require_once 'auth.php';
-
-// Si ja autenticat, redirigeix al portfolio
-if (is_logged_in()) {
-    header('Location: index.php');
-    exit;
-}
+if (is_logged_in()) { header('Location: index.php'); exit; }
 
 $error = '';
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = trim($_POST['username'] ?? '');
     $pass = trim($_POST['password'] ?? '');
-
     if ($user === ADMIN_USER && $pass === ADMIN_PASS) {
         $_SESSION['authenticated'] = true;
-        $_SESSION['user']          = $user;
+        $_SESSION['user'] = $user;
         header('Location: index.php');
         exit;
     } else {
-        $error = 'Credencials incorrectes. Accés denegat.';
+        $error = 'Credencials incorrectes.';
     }
 }
 ?>
@@ -28,57 +21,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LOGIN // GREN.WORKS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;600&display=swap" rel="stylesheet">
+  <title>Accés — GREN.WORKS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="world-map"></div>
-  <div class="cursor" id="cursor"></div>
+<div class="login-wrap">
+  <div class="login-box">
+    <span class="login-logo">GREN<em>.WORKS</em></span>
+    <span class="login-sub">Àrea privada · GGE Portfolio</span>
+    <div class="login-title">Identificació requerida</div>
 
-  <div class="login-wrap z1">
-    <div class="login-box">
-      <span class="logo-lg">GREN.WORKS</span>
-      <span class="sub">// SECURE ACCESS PORTAL</span>
-      <h2>AUTENTICACIÓ REQUERIDA</h2>
+    <?php if ($error): ?>
+      <div class="alert alert-error"><?= htmlspecialchars($error) ?></div>
+    <?php endif; ?>
 
-      <?php if ($error): ?>
-        <div class="alert alert-error"><?= htmlspecialchars($error) ?></div>
-      <?php endif; ?>
-
-      <form method="POST" action="login.php">
-        <div class="form-group">
-          <label for="username">IDENTIFICADOR</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            autocomplete="username"
-            required
-            value="<?= htmlspecialchars($_POST['username'] ?? '') ?>"
-          />
-        </div>
-        <div class="form-group">
-          <label for="password">CLAU D'ACCÉS</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            autocomplete="current-password"
-            required
-          />
-        </div>
-        <button type="submit" class="btn-submit">▸ INICIAR SESSIÓ</button>
-      </form>
-    </div>
+    <form method="POST" action="login.php">
+      <div class="form-group">
+        <label for="username">Usuari</label>
+        <input type="text" id="username" name="username" required autocomplete="username"
+               value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" />
+      </div>
+      <div class="form-group">
+        <label for="password">Contrasenya</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password" />
+      </div>
+      <button type="submit" class="btn-submit">Entrar →</button>
+    </form>
   </div>
-
-  <script>
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', e => {
-      cursor.style.top  = e.clientY + 'px';
-      cursor.style.left = e.clientX + 'px';
-    });
-  </script>
+</div>
 </body>
 </html>
